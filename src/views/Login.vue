@@ -1,7 +1,9 @@
 <template>
   <navbar />
+  <!-- all elements become invisible when vue loading starts -->
   <div v-if="!spin_visible" class="add_container">
     <h1>Login</h1>
+    <!-- form calls the emailavailable function after each submission -->
     <form @submit.prevent="submitcredentials">
       <div class="container">
         <div class="box">

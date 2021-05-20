@@ -11,13 +11,14 @@ export default {
   components:{},
   data() {
     return {
-      spin_visible:false,
     };
   },
   methods: {
+    // function: shows popup notification after successful log in
+    // conditions: user mus have to be logged in
     sweetalert(msg) {
       //console.log(localStorage.getItem("islogged"));
-      if (localStorage.getItem("isloggedin") == "true") {
+      if (localStorage.getItem("isloggedin") == "true") {   // log in checking
         Swal.fire({
           position: "top-end",
           width: 400,
@@ -30,6 +31,8 @@ export default {
     },
   },
   watch: {
+    // fucntion: detects the route change from login to home page
+    // calls the swleetarelt funtion for popup notification
     $route(to, from) {
       
       if (to.name == "Home" && from.name == "Login") {
@@ -42,6 +45,7 @@ export default {
 </script>
 
 <style >
+/* basic style for all whole page */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -50,14 +54,16 @@ export default {
   color: #2c3e50;
 }
 
+/* vue loading spiner style to show on the center  */
+
 #spinner{
   position: absolute;
   background: white;
   top: 50%;
   right:50%;
-  size: 600px;
 }
 
+/* common style for all the input fields */
 
 input[type="password"],input[type="email"],
 input[type="text"] {
@@ -75,6 +81,8 @@ input[type="text"] {
   font-size: 18px;
 }
 
+/* style for button */
+
 .login {
   background-color: #04aa6d;
   color: white;
@@ -85,13 +93,16 @@ input[type="text"] {
   width: 40%;
   border-radius: 20px;
   font-size: 20px;
-  font-family: "Open Sans", sans-serif;
 }
+
+/* button hover */
 .login:hover {
   background: #ff0057;
   color: white;
   transition: 0.5s;
 }
+
+/*sweet alert style */
 
 .swal2-title{
   font-family: 'Open Sans', sans-serif;
