@@ -14,12 +14,14 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
+    "serve-static": "^1.14.1",
     "sweetalert2": "^11.0.8",
     "vue": "^3.0.0",
     "vue-loading-spinner": "^1.0.11",
     "vue-router": "^4.0.0-0",
     "vue-simple-password-meter": "^1.0.3",
-    "vue-sweetalert2": "^4.3.1"
+    "vue-sweetalert2": "^4.3.1",
+    "webpack-dev-server": "^3.11.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -29,6 +31,6 @@
     "node-sass": "^6.0.0",
     "sass": "^1.32.13",
     "sass-loader": "^10.2.0",
-    "webpack": "^4.0.0"
+    "webpack": "^4.46.0"
   }
 }
